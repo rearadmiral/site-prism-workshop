@@ -27,7 +27,7 @@ namespace :app do
   task :stop do
     raise("Server does not appear to be running") unless File.exists?(PID_FILE)
     pid = File.read(PID_FILE)
-    Process.kill( 'HUP', pid.to_i )
+    Process.kill( 'KILL', pid.to_i )
     FileUtils.rm(PID_FILE)
   end
 
