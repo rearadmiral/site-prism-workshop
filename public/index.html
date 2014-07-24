@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Application Under Test</title>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  </head>
+  <body>
+
+    <h1>Items</h1>
+
+    <ul>
+      <li>Apple</li>
+    </ul>
+
+    <input type="text" placeholder="Orange" value=""/>
+    <button>Add</button>
+
+    <script type="text/javascript">
+      $(function() {
+
+          $('button').click(function() {
+            var newItem = $('<li>' + $('input').val() + '</li>');
+            $('ul').append(newItem);
+          });
+
+      });
+    </script>
+
+  </body>
+</html>
